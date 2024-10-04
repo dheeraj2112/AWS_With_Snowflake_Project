@@ -1,5 +1,6 @@
-# AWS_Snowflake_Project
-This project is an integration from AWS to Snowflake and vice versa.
+# AWS Lambda Snowflake Project using Python3.8 connector.
+
+This project is an integration from AWS Lambda to Snowflake Data Cloud for Data Analysis and Manipulation.
 
 
 Snowflake is a powerful data warehouse platform that allows you to store, analyze, and query large amounts of structured and semi-structured data. AWS Lambda, on the other hand, is a serverless compute service that lets you run your code without provisioning or managing servers. In this sample project, we will explore how to use Snowflake with Python in AWS Lambda.
