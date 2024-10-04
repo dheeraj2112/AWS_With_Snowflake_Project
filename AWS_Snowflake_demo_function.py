@@ -37,12 +37,12 @@ def lambda_handler(event, context):
     run_query(conn,statement4);
     print(statement4);
     print('------Executing Main Queries-------');
-    sql_query_table_creation = "CREATE OR REPLACE TABLE test_table(col1 integer, col2 string)";
-    print(sql_query_table_creation);
-    run_query(conn, sql_query_table_creation);
-    sql_query_data_ingestion="INSERT INTO test_table(col1, col2) VALUES    (123, 'test string1'), (456, 'test string2')";
-    run_query(conn, sql_query_data_ingestion);
-    print(sql_query_data_ingestion);
+    table_creation = "CREATE OR REPLACE TABLE DEMO_TABLE(COL1 INTEGER, COL2 STRING)";
+    print(table_creation);
+    run_query(conn, table_creation);
+    data_inserts="INSERT INTO DEMO_TABLE(COL1, COL2) VALUES (123, 'TEST1'),(234, 'TEST2'), (456, 'TEST3')";
+    run_query(data_inserts);
+    print(data_inserts);
     print('');
     print('------Execution Successful--------');
     print('Main Execution Block Ends')
