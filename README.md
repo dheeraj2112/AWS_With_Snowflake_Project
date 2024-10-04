@@ -26,4 +26,6 @@ To connect to Snowflake from your Lambda function, you will need to provide appr
 
 **Writing the Lambda Function**
 
+Now that we have the necessary environment set up, we can proceed to write our Lambda function code. In this example code, we will assume that you have a Python function that interacts with Snowflake to create/retrieve data.
+
 A sample demo code is available for use at the repo. https://github.com/dheeraj2112/AWS_Snowflake_Project/blob/9517b75fcb2b86216b14811ba173450fc628e5d2/AWS_Snowflake_demo_function.py
