@@ -1,4 +1,4 @@
-# AWS Lambda Snowflake Project using Python3.8 connector.
+# AWS Lambda with Snowflake Project using Python3.8 connector.
 
 This project is an integration from AWS Lambda to Snowflake Data Cloud for Data Analysis and Manipulation.
 
