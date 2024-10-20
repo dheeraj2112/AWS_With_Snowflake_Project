@@ -7,7 +7,7 @@ The goal of this project is to implement a data warehousing solution using AWS a
 
 i. Valid Snowflake and AWS Accounts
 
-ii. External Snowflake Stage with Storage Integration pointed to S3 Bucket with required IAM role and policies.
+ii. External Snowflake Stage with Storage Integration pointing to AWS S3 Bucket with appropriate IAM role and policies.
 
 iii. On-Prem Oracle db HR schema objects exported in AWS S3 Bucket in CSV format which are the source files for this project. The object exports can obtained from step #2 mentioned below, if not available already.
 
@@ -17,7 +17,7 @@ iii. On-Prem Oracle db HR schema objects exported in AWS S3 Bucket in CSV format
 
 2.  Source and Target
    
-Source: Source is Oracle on-prem HR schema objects exports in CSV format. The source files can be used from below link, if not available handy.
+Source: Source is Oracle on-prem HR schema objects exports in AWS S3 in CSV format. The source files can be used from below link, if not available handy.
 
 https://github.com/dheeraj2112/AWS_With_Snowflake_Project/tree/master/AWS%20Snowflake%20End%20to%20End%20Project/2.Source%20Files
 
@@ -27,7 +27,7 @@ https://github.com/dheeraj2112/AWS_With_Snowflake_Project/blob/master/AWS%20Snow
 
 3.  ETL/ELT Data Flows using Snowflake Tasks or Snow PIPEs.
 
-**i.** Source (CSV Files) to EDW_STG (Snowflake) : The code repo can be found here to Create the STAGE(s) and FILE FORMATS then run the PUT command from SnowSQL command line utility to load these CSV files into the respective STAGE(s).
+**i.** Source (CSV Files) to EDW_STG (Snowflake) : The code repo can be found here to Create the External STAGE(s), Storage Integration and FILE FORMATS then run the COPY INTO  command from SQL Worksheet, Tasks or PIPE(s) to load these CSV files into the respective STG table(s).
 
 https://github.com/dheeraj2112/AWS_With_Snowflake_Project/blob/master/AWS%20Snowflake%20End%20to%20End%20Project/4.%20AWS%20Snowflake%20Scripts/0.%20AWS%20to%20Snowflake%20Data%20Loading%20PREP%20steps.sql
 
@@ -35,7 +35,7 @@ https://github.com/dheeraj2112/AWS_With_Snowflake_Project/blob/master/AWS%20Snow
 
 https://github.com/dheeraj2112/AWS_With_Snowflake_Project/blob/master/AWS%20Snowflake%20End%20to%20End%20Project/4.%20AWS%20Snowflake%20Scripts/1.%20AWS%20S3%20SRC%20to%20EDW_STG%20Pipelines%20using%20Snowflake%20Tasks.sql
 
-Optional: SRC to EDW_STG data pipelines can be implemented using Snowflake feature such Snowflake SnowPipe as well.We can Setup Snowpipe to load data from files in a stage into staging tables. Once the PIPE(s) are created  then use the refresh command to load STG tables manually.
+Optional: SRC to EDW_STG data pipelines can be implemented using Snowflake feature such Snowflake SnowPipe as well.We can Setup Snowpipe to load data from files in a stage into staging tables. Once the PIPE(s) are created then use the refresh command to load STG tables manually.
 
 Note: The REFRESH functionality is intended for short term use to resolve specific issues when Snowpipe fails to load a subset of files and is not intended for regular use.
 The REFRESH functionality in the Snowpipe is explicitly to load existing or scan for new files. In a production environment, you'll likely enable AUTO_INGEST, connecting it with your cloud storage events (like AWS SNS) and process new files automatically.The code repo can be found here.
@@ -46,7 +46,7 @@ https://github.com/dheeraj2112/AWS_With_Snowflake_Project/blob/master/AWS%20Snow
 
 https://github.com/dheeraj2112/AWS_With_Snowflake_Project/blob/master/AWS%20Snowflake%20End%20to%20End%20Project/4.%20AWS%20Snowflake%20Scripts/2.%20Snowflake%20EDW_STG%20to%20EDW%20Pipelines%20using%20Snowflake%20Tasks.sql
 
-**iii.** Orchestration and scheduling : Using Snowflake Tasks as per needed schedule.
+**iii.** Orchestration and scheduling : Using Snowflake Tasks as per needed schedule with SCHEDULE parameter.
    
 4.  Load Validations
 
