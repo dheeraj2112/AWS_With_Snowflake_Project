@@ -1,15 +1,15 @@
 **AWS and Snowflake End-to-End Project Overview and Summary**
 
 1. Project Overview
-The goal of this project is to implement a data warehousing solution using Snowflake, enabling efficient data storage, processing, and analysis. This end-to-end project covers data ingestion, transformation, storage, and reporting, aiming to provide a unified view of business data for better decision-making.
+The goal of this project is to implement a data warehousing solution using AWS and Snowflake, enabling efficient data storage, processing, and analysis. This end-to-end project covers data ingestion, transformation, storage, and reporting, aiming to provide a unified view of business data for better decision-making.
 
 1.1) Pre-requisite:
 
-i. Valid Snowflake Account
+i. Valid Snowflake and AWS Accounts
 
-ii. Snowsql installed,configured and ready to use with the required connections.
+ii. External Snowflake Stage with Storage Integration pointed to S3 Bucket with required IAM role and policies.
 
-iii. On-Prem Oracle db HR schema objects exported in CSV format which are the source files for this project. The objects export can obtained from step #2 mentioned below, if not available already.
+iii. On-Prem Oracle db HR schema objects exported in AWS S3 Bucket in CSV format which are the source files for this project. The object exports can obtained from step #2 mentioned below, if not available already.
 
 1.2) Reference Architecture Diagram
 
