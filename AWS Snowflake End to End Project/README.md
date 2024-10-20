@@ -13,8 +13,7 @@ iii. On-Prem Oracle db HR schema objects exported in CSV format which are the so
 
 1.2) Reference Architecture Diagram
 
-![image](https://github.com/user-attachments/assets/cfc6e941-e036-4f81-a91c-870f739576bc)
-
+![image](https://github.com/user-attachments/assets/0e444026-c36a-470d-b5b2-334395d8d19d)
 
 2.  Source and Target
    
