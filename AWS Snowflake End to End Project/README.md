@@ -13,7 +13,8 @@ iii. On-Prem Oracle db HR schema objects exported in AWS S3 Bucket in CSV format
 
 1.2) Reference Architecture Diagram
 
-![image](https://github.com/user-attachments/assets/0e444026-c36a-470d-b5b2-334395d8d19d)
+![image](https://github.com/user-attachments/assets/29498a5e-cdb3-4fea-aeb0-e483d7012b5d)
+
 
 2.  Source and Target
    
