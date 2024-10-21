@@ -37,8 +37,12 @@ https://github.com/dheeraj2112/AWS_With_Snowflake_Project/blob/master/AWS%20Snow
 
 Optional: SRC to EDW_STG data pipelines can be implemented using Snowflake feature such Snowflake SnowPipe as well.We can Setup Snowpipe to load data from files in a stage into staging tables. Once the PIPE(s) are created then use the refresh command to load STG tables manually.
 
-Note: The REFRESH functionality is intended for short term use to resolve specific issues when Snowpipe fails to load a subset of files and is not intended for regular use.
-The REFRESH functionality in the Snowpipe is explicitly to load existing or scan for new files. In a production environment, you'll likely enable AUTO_INGEST, connecting it with your cloud storage events (like AWS SNS) and process new files automatically.The code repo can be found here.
+**Note 1:** The REFRESH functionality is intended for short term use to resolve specific issues when Snowpipe fails to load a subset of files and is not intended for regular use.
+The REFRESH functionality in the Snowpipe is explicitly to load existing or scan for new files. In a production environment, you'll likely enable AUTO_INGEST, connecting it with your cloud storage events (like AWS SNS) and process new files automatically.
+
+**Note 2:** To reload the data from External Stage, you must either specify FORCE = TRUE in COPY INTO command or modify the file and stage it again, which generates a new checksum.By default, even truncating the STG tables will not re-load data into these tables from External Stage unlike Internal Stages.
+
+The code repo can be found here.
 
 https://github.com/dheeraj2112/AWS_With_Snowflake_Project/blob/master/AWS%20Snowflake%20End%20to%20End%20Project/4.%20AWS%20Snowflake%20Scripts/1.1%20AWS%20S3%20SRC%20to%20EDW_STG%20Pipelines%20using%20Snowflake%20Pipe.sql
 
