@@ -1,4 +1,4 @@
-**AWS and Snowflake End-to-End Project Overview and Summary**
+**AWS and Snowflake End-to-End Data Warehousing Project Overview and Summary**
 
 1. Project Overview
 The goal of this project is to implement a data warehousing solution using AWS and Snowflake, enabling efficient data storage, processing, and analysis. This end-to-end project covers data ingestion, transformation, storage, and reporting, aiming to provide a unified view of business data for better decision-making.
