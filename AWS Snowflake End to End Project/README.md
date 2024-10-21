@@ -7,7 +7,9 @@ The goal of this project is to implement a data warehousing solution using AWS a
 
 i. Valid Snowflake and AWS Accounts
 
-ii. External Snowflake Stage with Storage Integration pointing to AWS S3 Bucket with appropriate IAM role and policies.
+ii. External Snowflake Stage with Storage Integration pointing to AWS S3 Bucket with appropriate IAM role and policies.Follow the below link for the reference. 
+
+https://docs.snowflake.com/en/user-guide/data-load-s3-config-storage-integration.html#step-1-configure-access-permissions-for-the-s3-bucket
 
 iii. On-Prem Oracle db HR schema objects exported in AWS S3 Bucket in CSV format which are the source files for this project. The object exports can obtained from step #2 mentioned below, if not available already.
 
